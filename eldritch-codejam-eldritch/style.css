@@ -1,0 +1,204 @@
+body {
+  overflow: hidden;
+  margin: 10px;
+  font-family: 'Red Hat Text', Verdana, sans-serif;
+  font-size: 20px;
+  color: blueviolet;
+  text-align: center;
+  background-image: url("./assets/home.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.ancients-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 10px;
+  min-width: 41%;
+}
+
+.ancient {
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 260px;
+  width: 200px;
+  transition: all .3s ease-in;
+  border: 5px solid blueviolet;
+}
+
+.ancient-active {
+  border: 5px solid yellow;
+}
+
+.cthulthu {
+  background-image: url("./assets/Ancients/Cthulthu.png");
+}
+
+.shubNiggurath {
+  background-image: url("./assets/Ancients/ShubNiggurath.png");
+}
+
+.iogSothoth {
+  background-image: url("./assets/Ancients/IogSothoth.png");
+}
+
+.azathoth {
+  background-image: url("./assets/Ancients/Azathoth.png");
+}
+
+.level-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
+
+.level {
+  cursor: pointer;
+  color: blueviolet;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid blueviolet;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all .3s ease-in;
+}
+
+.level:hover {
+  color: yellow;
+}
+
+.level-active {
+  background: red;
+}
+
+.finish-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 30px;
+  width: 70%;
+}
+
+.tracker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
+
+.tracker-container-active {
+  opacity: 1;
+}
+
+.stage-title {
+  position: relative;
+  margin-bottom: 10px;
+  transition: all .3s ease-in;
+}
+
+.stage-title-end {
+  color: yellow;
+}
+
+.first-stage,
+.second-stage,
+.third-stage {
+  display: flex;
+  column-gap: 5px;
+  margin-bottom: 15px;
+}
+
+.first-stage-green,
+.second-stage-green,
+.third-stage-green {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.first-stage-brown,
+.second-stage-brown,
+.third-stage-brown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #cc5b5b;
+}
+
+.first-stage-blue,
+.second-stage-blue,
+.third-stage-blue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #008cff;
+}
+
+.shuffle-button {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in;
+}
+
+.shuffle-button-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.reverse-side-card {
+  width: 200px;
+  height: 260px;
+  background-image: url("./assets/mythicCardBackground.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-in;
+}
+
+.reverse-side-card-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.front-side-card {
+  width: 200px;
+  height: 260px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
